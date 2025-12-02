@@ -22,4 +22,8 @@ public class Rol {
     private long id;
     private String nombre;
     private long orden;
+
+    @ManyToOne
+    @JoinColumn(name = "id")
+    private Docente docente;
 }
