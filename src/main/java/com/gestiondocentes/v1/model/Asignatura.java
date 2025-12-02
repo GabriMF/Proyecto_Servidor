@@ -26,7 +26,7 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Asignatura {
     @Id
-    private long id;
+    private Long id;
     private String nombre;
     private String siglas;
     private int curso;

@@ -25,7 +25,7 @@ import lombok.NoArgsConstructor;
 public class AsuntoPropio {
 
     @Id
-    private long id;
+    private Long id;
     private LocalDate diaSolicitado;
     private String descripcion;
     private LocalDateTime fechaTramitacion;

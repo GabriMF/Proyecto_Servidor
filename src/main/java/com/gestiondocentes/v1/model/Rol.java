@@ -19,9 +19,9 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Rol {
     @Id
-    private long id;
+    private Long id;
     private String nombre;
-    private long orden;
+    private Long orden;
 
     @ManyToOne
     @JoinColumn(name = "id")

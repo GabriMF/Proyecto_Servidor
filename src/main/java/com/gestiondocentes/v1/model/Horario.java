@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Horario {
     @Id
-    private long id;
+    private Long id;
     private int dia;
     private int hora;
     private String aula;

@@ -24,7 +24,7 @@ import lombok.NoArgsConstructor;
 public class Departamento {
     
     @Id
-    private long id;
+    private Long id;
     private String nombre;
     private String codigo;
     private String telefono;

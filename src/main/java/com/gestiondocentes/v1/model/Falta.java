@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Falta {
     @Id
-    private long id;
+    private Long id;
     private LocalDate fecha;
     private String anotacion;
     private String material;
