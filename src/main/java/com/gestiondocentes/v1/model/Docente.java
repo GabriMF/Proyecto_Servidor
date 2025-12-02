@@ -7,10 +7,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
+import jakarta.persistence.Column;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -21,13 +18,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 @Entity
-public class AsuntoPropio {
-
+public class Docente {
     @Id
     private long id;
-    private LocalDate diaSolicitado;
-    private String descripcion;
-    private LocalDateTime fechaTramitacion;
-    private boolean aprobado;
-
+    private String nombre;
+    private String apellidos;
+    private String email;
+    private String siglas;
 }

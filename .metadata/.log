@@ -1,0 +1,165 @@
+!SESSION 2025-12-02 19:37:19.681 -----------------------------------------------
+eclipse.buildId=4.37.0.20250905-1455
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-12-02 19:37:47.210
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.lemminx.uber-jar 4 0 2025-12-02 19:37:49.010
+!MESSAGE bundle org.eclipse.lemminx.uber-jar:0.31.0 (274) Component descriptor entry 'OSGI-INF/*.xml' not found
+
+!ENTRY ch.qos.logback.classic 1 0 2025-12-02 19:38:17.149
+!MESSAGE Logback config file: /home/gabi/Escritorio/Cosas Clase/Gestion_Docentes/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.100.20250418-1315.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-12-02 19:38:18.516
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-12-02 19:38:18.516
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-12-02 19:38:19.595
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-12-02 19:38:19.595
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.buildship.core 2 0 2025-12-02 19:38:55.417
+!MESSAGE Could not load Gradle version information
+!STACK 0
+org.gradle.api.UncheckedIOException: Cannot download published Gradle versions.
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersions.downloadVersionInformation(PublishedGradleVersions.java:167)
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersions.tryToDownloadAndCacheVersions(PublishedGradleVersions.java:151)
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersions.create(PublishedGradleVersions.java:111)
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersionsWrapper$LoadVersionsJob.run(PublishedGradleVersionsWrapper.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:345)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:420)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
+	at java.base/sun.net.www.MeteredStream.read(MeteredStream.java:131)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$HttpInputStream.read(HttpURLConnection.java:3693)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:350)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:393)
+	at java.base/sun.nio.cs.StreamDecoder.lockedRead(StreamDecoder.java:217)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:171)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:188)
+	at java.base/java.io.Reader.read(Reader.java:265)
+	at com.google.common.io.CharStreams.copyReaderToBuilder(CharStreams.java:119)
+	at com.google.common.io.CharStreams.toStringBuilder(CharStreams.java:177)
+	at com.google.common.io.CharStreams.toString(CharStreams.java:163)
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersions.downloadVersionInformation(PublishedGradleVersions.java:165)
+	... 4 more
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-12-02 19:44:20.419
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.springsource.ide.eclipse.commons.livexp.core.AsyncLiveExpression$1 RUNNING
+	 at java.base/sun.nio.ch.Net.poll(Native Method)
+	 at java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:191)
+	 at java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:201)
+	 at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309)
+	 at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	 at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	 at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	 at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	 at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	 at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	 at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	 at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066)
+	 at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:291)
+	 at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:347)
+	 at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:420)
+	 at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
+	 at java.base/sun.net.www.MeteredStream.read(MeteredStream.java:131)
+	 at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+	 at java.base/sun.net.www.protocol.http.HttpURLConnection$HttpInputStream.read(HttpURLConnection.java:3693)
+	 at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:350)
+	 at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:393)
+	 at java.base/sun.nio.cs.StreamDecoder.lockedRead(StreamDecoder.java:217)
+	 at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:171)
+	 at java.base/java.io.InputStreamReader.read(InputStreamReader.java:188)
+	 at java.base/java.io.BufferedReader.fill(BufferedReader.java:160)
+	 at java.base/java.io.BufferedReader.implRead(BufferedReader.java:196)
+	 at java.base/java.io.BufferedReader.read(BufferedReader.java:181)
+	 at org.json.JSONTokener.next(JSONTokener.java:179)
+	 at org.json.JSONTokener.nextString(JSONTokener.java:301)
+	 at org.json.JSONTokener.nextValue(JSONTokener.java:414)
+	 at org.json.JSONObject.<init>(JSONObject.java:226)
+	 at org.json.JSONTokener.nextValue(JSONTokener.java:418)
+	 at org.json.JSONObject.<init>(JSONObject.java:245)
+	 at org.springframework.ide.eclipse.boot.core.initializr.InitializrServiceSpec.parseFrom(InitializrServiceSpec.java:132)
+	 at org.springframework.ide.eclipse.boot.core.initializr.InitializrServiceSpec.parseFrom(InitializrServiceSpec.java:82)
+	 at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizardModel.parseJsonFrom(NewSpringBootWizardModel.java:535)
+	 at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizardModel.discoverOptions(NewSpringBootWizardModel.java:423)
+	 at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizardModel.<init>(NewSpringBootWizardModel.java:134)
+	 at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizardFactoryModel.lambda$0(NewSpringBootWizardFactoryModel.java:28)
+	 at org.springframework.ide.eclipse.boot.wizard.InitializrFactoryModel$1.compute(InitializrFactoryModel.java:54)
+	 at org.springsource.ide.eclipse.commons.livexp.core.LiveExpression.refresh(LiveExpression.java:74)
+	 at org.springsource.ide.eclipse.commons.livexp.core.AsyncLiveExpression.syncRefresh(AsyncLiveExpression.java:134)
+	 at org.springsource.ide.eclipse.commons.livexp.core.AsyncLiveExpression$1.run(AsyncLiveExpression.java:101)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-12-02 19:44:20.421
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.springsource.ide.eclipse.commons.livexp.core.AsyncLiveExpression$1 RUNNING
+	 at java.base/sun.nio.ch.Net.poll(Native Method)
+	 at java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:191)
+	 at java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:201)
+	 at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309)
+	 at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	 at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	 at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	 at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	 at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	 at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	 at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	 at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066)
+	 at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:345)
+	 at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:420)
+	 at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
+	 at java.base/sun.net.www.MeteredStream.read(MeteredStream.java:131)
+	 at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+	 at java.base/sun.net.www.protocol.http.HttpURLConnection$HttpInputStream.read(HttpURLConnection.java:3693)
+	 at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:350)
+	 at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:393)
+	 at java.base/sun.nio.cs.StreamDecoder.lockedRead(StreamDecoder.java:217)
+	 at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:171)
+	 at java.base/java.io.InputStreamReader.read(InputStreamReader.java:188)
+	 at java.base/java.io.BufferedReader.fill(BufferedReader.java:160)
+	 at java.base/java.io.BufferedReader.implRead(BufferedReader.java:196)
+	 at java.base/java.io.BufferedReader.read(BufferedReader.java:181)
+	 at org.json.JSONTokener.next(JSONTokener.java:179)
+	 at org.json.JSONTokener.nextString(JSONTokener.java:301)
+	 at org.json.JSONTokener.nextValue(JSONTokener.java:414)
+	 at org.json.JSONObject.<init>(JSONObject.java:245)
+	 at org.json.JSONTokener.nextValue(JSONTokener.java:418)
+	 at org.json.JSONArray.<init>(JSONArray.java:105)
+	 at org.json.JSONTokener.nextValue(JSONTokener.java:425)
+	 at org.json.JSONObject.<init>(JSONObject.java:245)
+	 at org.json.JSONTokener.nextValue(JSONTokener.java:418)
+	 at org.json.JSONArray.<init>(JSONArray.java:105)
+	 at org.json.JSONTokener.nextValue(JSONTokener.java:425)
+	 at org.json.JSONObject.<init>(JSONObject.java:245)
+	 at org.json.JSONTokener.nextValue(JSONTokener.java:418)
+	 at org.json.JSONObject.<init>(JSONObject.java:245)
+	 at org.springframework.ide.eclipse.boot.core.initializr.InitializrServiceSpec.parseFrom(InitializrServiceSpec.java:132)
+	 at org.springframework.ide.eclipse.boot.core.initializr.InitializrServiceSpec.parseFrom(InitializrServiceSpec.java:82)
+	 at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizardModel.parseJsonFrom(NewSpringBootWizardModel.java:535)
+	 at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizardModel.discoverOptions(NewSpringBootWizardModel.java:423)
+	 at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizardModel.<init>(NewSpringBootWizardModel.java:134)
+	 at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizardFactoryModel.lambda$0(NewSpringBootWizardFactoryModel.java:28)
+	 at org.springframework.ide.eclipse.boot.wizard.InitializrFactoryModel$1.compute(InitializrFactoryModel.java:54)
+	 at org.springsource.ide.eclipse.commons.livexp.core.LiveExpression.refresh(LiveExpression.java:74)
+	 at org.springsource.ide.eclipse.commons.livexp.core.AsyncLiveExpression.syncRefresh(AsyncLiveExpression.java:134)
+	 at org.springsource.ide.eclipse.commons.livexp.core.AsyncLiveExpression$1.run(AsyncLiveExpression.java:101)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

@@ -11,6 +11,7 @@ import jakarta.persistence.OneToOne;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -21,13 +22,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 @Entity
-public class AsuntoPropio {
-
+public class Asignatura {
     @Id
     private long id;
-    private LocalDate diaSolicitado;
-    private String descripcion;
-    private LocalDateTime fechaTramitacion;
-    private boolean aprobado;
-
+    private String nombre;
+    private String siglas;
+    private int curso;
 }

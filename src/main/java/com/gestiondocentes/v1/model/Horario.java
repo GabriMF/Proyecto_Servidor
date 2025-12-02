@@ -8,10 +8,6 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
@@ -21,13 +17,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 @Entity
-public class AsuntoPropio {
-
+public class Horario {
     @Id
     private long id;
-    private LocalDate diaSolicitado;
-    private String descripcion;
-    private LocalDateTime fechaTramitacion;
-    private boolean aprobado;
-
+    private int dia;
+    private int hora;
+    private String aula;
 }
