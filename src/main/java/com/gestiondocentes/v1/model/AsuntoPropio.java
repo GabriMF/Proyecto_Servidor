@@ -10,8 +10,9 @@ import jakarta.persistence.OneToOne;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
-
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
@@ -29,5 +30,9 @@ public class AsuntoPropio {
     private String descripcion;
     private LocalDateTime fechaTramitacion;
     private boolean aprobado;
+
+    @ManyToOne
+    @JoinColumn(name = "id")
+    private Docente docente;
 
 }

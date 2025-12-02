@@ -1,5 +1,7 @@
 package com.gestiondocentes.v1.model;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
@@ -23,4 +25,15 @@ public class Horario {
     private int dia;
     private int hora;
     private String aula;
+
+    @ManyToOne
+    @JoinColumn(name = "id")
+    private Docente docente;
+
+    @OneToMany(mappedBy = "horario")
+    private List<Falta> faltas;
+
+    @ManyToOne
+    @JoinColumn(name = "id")
+    private Asignatura asignatura;
 }

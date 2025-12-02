@@ -7,6 +7,9 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+
+import java.util.List;
+
 import jakarta.persistence.Column;
 
 import lombok.Getter;
@@ -26,4 +29,6 @@ public class Departamento {
     private String codigo;
     private String telefono;
 
+    @OneToMany(mappedBy = "departamento")
+    private List<Docente> docentes;
 }

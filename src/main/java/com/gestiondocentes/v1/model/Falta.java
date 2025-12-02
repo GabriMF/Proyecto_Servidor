@@ -25,4 +25,12 @@ public class Falta {
     private LocalDate fecha;
     private String anotacion;
     private String material;
+
+    @ManyToOne
+    @JoinColumn(name = "id")
+    private Horario horario;
+
+    @ManyToOne
+    @JoinColumn(name = "id")
+    private Docente docente;
 }

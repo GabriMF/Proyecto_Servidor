@@ -7,6 +7,9 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+
+import java.util.List;
+
 import jakarta.persistence.Column;
 
 import lombok.Getter;
@@ -25,4 +28,20 @@ public class Docente {
     private String apellidos;
     private String email;
     private String siglas;
+
+    @OneToMany(mappedBy = "docente")
+    private List<AsuntoPropio> asuntoPropios;
+
+    @ManyToOne
+    @JoinColumn(name="id")
+    private Departamento departamento;
+
+    @OneToMany(mappedBy = "docente")
+    private List<Horario> horarios;
+
+    @OneToMany(mappedBy = "docente")
+    private List<Rol> rols;
+
+    @OneToMany(mappedBy = "docente")
+    private List<Falta> faltas;
 }
