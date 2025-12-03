@@ -13,6 +13,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 
 import lombok.Getter;
@@ -30,4 +32,7 @@ public class Ciclo {
     private String nombre;
     private String familia;
     private String codigo;
+
+    @OneToMany(mappedBy = "ciclo")
+    private List<Asignatura> asignaturas;
 }

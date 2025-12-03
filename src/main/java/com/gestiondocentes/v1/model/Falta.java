@@ -10,6 +10,8 @@ import jakarta.persistence.OneToOne;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;

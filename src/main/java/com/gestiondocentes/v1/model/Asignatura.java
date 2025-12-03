@@ -8,12 +8,13 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.Column;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import jakarta.persistence.Column;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -34,5 +35,7 @@ public class Asignatura {
     @OneToMany(mappedBy = "asignatura")
     private List<Horario> horarios;
 
-    // @ManyToMany
+    @ManyToOne
+    @JoinColumn(name = "id")
+    private Ciclo ciclo;
 }

@@ -10,7 +10,7 @@ import jakarta.persistence.OneToOne;
 
 import java.util.List;
 
-import jakarta.persistence.Column;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Getter;
 import lombok.Setter;
