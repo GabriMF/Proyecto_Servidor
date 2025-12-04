@@ -24,14 +24,17 @@ public class DocenteService {
     }
 
     public Optional <Docente> buscarDocentePorId(Long id){
+
         return docenteRepository.findById(id);
     }
 
     public Docente guardarDocente(Docente docente){
+
         return docenteRepository.save(docente);
     }
 
     public void borrarDocente(Long id){
+        
         docenteRepository.deleteById(id);
     }
 

@@ -1,6 +1,7 @@
 package com.gestiondocentes.v1.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -24,10 +25,11 @@ import lombok.NoArgsConstructor;
 public class Departamento {
     
     @Id
-    private Long id;
-    private String nombre;
-    private String codigo;
-    private String telefono;
+    @GeneratedValue
+    private Long idDepartamento;
+    private String nombreDepartamento;
+    private String codigoDepartamento;
+    private String telefonoDepartamento;
 
     @OneToMany(mappedBy = "departamento")
     private List<Docente> docentes;

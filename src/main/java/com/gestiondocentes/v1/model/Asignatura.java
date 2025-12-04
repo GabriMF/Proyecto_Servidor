@@ -1,6 +1,7 @@
 package com.gestiondocentes.v1.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -27,15 +28,16 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Asignatura {
     @Id
-    private Long id;
-    private String nombre;
-    private String siglas;
-    private int curso;
+    @GeneratedValue
+    private Long idAsignatura;
+    private String nombreAsignatura;
+    private String siglasAsignatura;
+    private int cursoAsignatura;
 
     @OneToMany(mappedBy = "asignatura")
     private List<Horario> horarios;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "idCiclo")
     private Ciclo ciclo;
 }

@@ -1,6 +1,7 @@
 package com.gestiondocentes.v1.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -22,18 +23,20 @@ import lombok.NoArgsConstructor;
 
 @Entity
 public class Docente {
+
     @Id
-    private Long id;
-    private String nombre;
-    private String apellidos;
-    private String email;
-    private String siglas;
+    @GeneratedValue
+    private Long idDocente;
+    private String nombreDocente;
+    private String apellidosDocente;
+    private String emailDocente;
+    private String siglasDocente;
 
     @OneToMany(mappedBy = "docente")
     private List<AsuntoPropio> asuntoPropios;
 
     @ManyToOne
-    @JoinColumn(name="id")
+    @JoinColumn(name="idDepartamento")
     private Departamento departamento;
 
     @OneToMany(mappedBy = "docente")

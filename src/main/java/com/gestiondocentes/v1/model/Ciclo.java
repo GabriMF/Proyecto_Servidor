@@ -1,6 +1,7 @@
 package com.gestiondocentes.v1.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -27,11 +28,13 @@ import lombok.NoArgsConstructor;
 
 @Entity
 public class Ciclo {
+
     @Id
-    private Long id;
-    private String nombre;
-    private String familia;
-    private String codigo;
+    @GeneratedValue
+    private Long idCiclo;
+    private String nombreCiclo;
+    private String familiaCiclo;
+    private String codigoCiclo;
 
     @OneToMany(mappedBy = "ciclo")
     private List<Asignatura> asignaturas;

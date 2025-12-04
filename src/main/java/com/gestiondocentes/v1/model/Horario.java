@@ -3,6 +3,7 @@ package com.gestiondocentes.v1.model;
 import java.util.List;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -22,20 +23,22 @@ import lombok.NoArgsConstructor;
 
 @Entity
 public class Horario {
+
     @Id
-    private Long id;
-    private int dia;
-    private int hora;
-    private String aula;
+    @GeneratedValue
+    private Long idHorario;
+    private int diaHorario;
+    private int horaHorario;
+    private String aulaHorario;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "idDocente")
     private Docente docente;
 
     @OneToMany(mappedBy = "horario")
     private List<Falta> faltas;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "idAsignatura")
     private Asignatura asignatura;
 }

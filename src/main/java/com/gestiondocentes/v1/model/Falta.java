@@ -1,6 +1,7 @@
 package com.gestiondocentes.v1.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -22,17 +23,19 @@ import lombok.NoArgsConstructor;
 
 @Entity
 public class Falta {
+
     @Id
-    private Long id;
-    private LocalDate fecha;
-    private String anotacion;
-    private String material;
+    @GeneratedValue
+    private Long idFalta;
+    private LocalDate fechaFalta;
+    private String anotacionFalta;
+    private String materialFalta;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "idHorario")
     private Horario horario;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "idDocente")
     private Docente docente;
 }

@@ -1,6 +1,7 @@
 package com.gestiondocentes.v1.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -27,14 +28,15 @@ import lombok.NoArgsConstructor;
 public class AsuntoPropio {
 
     @Id
-    private Long id;
-    private LocalDate diaSolicitado;
-    private String descripcion;
-    private LocalDateTime fechaTramitacion;
-    private boolean aprobado;
+    @GeneratedValue
+    private Long idAsuntoPropio;
+    private LocalDate diaSolicitadoAsuntoPropio;
+    private String descripcionAsuntoPropio;
+    private LocalDateTime fechaTramitacionAsuntoPropio;
+    private boolean aprobadoAsuntoPropio;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "idDocente")
     private Docente docente;
 
 }

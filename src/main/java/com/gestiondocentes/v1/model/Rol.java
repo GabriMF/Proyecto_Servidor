@@ -1,6 +1,7 @@
 package com.gestiondocentes.v1.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -20,12 +21,14 @@ import lombok.NoArgsConstructor;
 
 @Entity
 public class Rol {
+
     @Id
-    private Long id;
-    private String nombre;
-    private Long orden;
+    @GeneratedValue
+    private Long idRol;
+    private String nombreRol;
+    private Long ordenRol;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "idDocente")
     private Docente docente;
 }
